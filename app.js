@@ -219,7 +219,13 @@ menuBtnEl.addEventListener('click', function (){
 
 // CLICKING SAVE BUTTON
 let saveBtnEl = document.querySelector('#saveNoteBtn');
-saveBtnEl.addEventListener('click', saveNote);
+saveBtnEl.addEventListener('click', function(){
+  var x = window.matchMedia("(max-width: 63rem)")
+  if (x.matches) { // If media query matches
+    listViewEl.style.transform = 'translateX(0%)';
+    } 
+    saveNote();
+});
 
 // CLICKING DELETE BUTTON
 let deleteBtnEl = document.querySelector('#deleteNoteBtn');
