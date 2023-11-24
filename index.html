@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <title>Notes App</title>
+</head>
+<body>
+  <main class="main-wrap">
+<!-- MENU LIST VIEW -->
+<div class="list-view" id="listView">
+  <div class="title title-list">
+    <h1>NOTES</h1>
+  </div>
+
+  <div class="toolbar">
+    <button class="btn-style" id="newNoteBtn">New note</button>
+  </div>
+  <div id="notesContainer" class="notes-container">
+
+  </div>
+</div>
+
+
+<!-- NOTE VIEW -->
+<div class="note-view">
+
+  <div  class="title title-notes">
+    <h1 id="logo-desktop">NOTES</h1>
+    <button class="menu-btn" id="menuBtn">MENU</button>
+  </div>
+
+  <div class="toolbar">
+    <button class="btn-style" id="saveNoteBtn">Save</button>
+    <button class="btn-style" id="deleteNoteBtn">Delete</button>
+  </div>
+
+  <div class="note-container">
+    <form>
+      <div class="note-container__header">
+        <input id="idHolder" type="hidden" value="">
+        <div class="note-title">
+          <span contenteditable="true" role="textbox" id="newTitle" class="textarea-title"></span>
+        </div>
+        <div class="note-date">
+          <p id="date">23/Nov/2023 - 15:34</p>
+        </div>
+      </div>
+      <div class="note-container__content">
+        <span contenteditable="true" role="textbox" id="newNote" class="textarea-content"></span>
+      </div>
+    </form>
+  </div>
+</div>
+</main>
+
+  <script src="app.js"></script>
+</body>
+</html>
